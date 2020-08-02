@@ -4,6 +4,7 @@
   "version": "0.4.10",
   "author": "Yaroslav Kasperovych <ilovewindows96@gmail.com>",
   "dependencies": {
+    "@types/react-color": "^3.0.4",
     "@types/react-helmet": "6.0.0",
     "@types/typography": "0.16.3",
     "gatsby": "2.24.23",
