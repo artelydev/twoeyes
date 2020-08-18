@@ -1,0 +1,62 @@
+.level {
+  &__container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+  }
+
+  &__picker {
+    cursor: pointer;
+  }
+
+  &__navigation {
+    text-align: justify;
+  }
+
+  &__hint_bottom,
+  &__navigation {
+    line-height: 50px;
+    padding: 10px;
+    margin-bottom: 0;
+
+    pre {
+      @keyframes enter {
+        0% {
+          color: white;
+          background-color: darkorchid;
+        }
+        50% {
+          color: darkorchid;
+          background: white;
+        }
+        100% {
+          color: white;
+          background-color: darkorchid;
+        }
+      }
+
+      display: inline;
+      animation-name: enter;
+      padding: 5px;
+      cursor: pointer;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+      transition: all 0.3s ease;
+    }
+  }
+
+  &__hint {
+    &_bottom {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    &_top {
+      margin-bottom: 10px;
+      padding: 10px;
+      text-align: center;
+    }
+  }
+}

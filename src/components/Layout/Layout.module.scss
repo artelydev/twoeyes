@@ -1,0 +1,15 @@
+.layout {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    transition: background-color 0.3s ease;
+  }
+
+  &__navigation {
+    margin-top: auto;
+  }
+
+  &__main {
+    min-height: 100vh;
+  }
+}

@@ -1,0 +1,13 @@
+.exercise {
+  &__navigation {
+    &__toggle {
+      cursor: pointer;
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+
+    &__popover {
+      padding: 30px;
+    }
+  }
+}

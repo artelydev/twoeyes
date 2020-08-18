@@ -1,0 +1,19 @@
+.Cursor--blinking {
+  @keyframes blinking {
+    0% {
+      opacity: 1;
+    }
+
+    50% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  animation-name: blinking;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
