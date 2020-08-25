@@ -24,5 +24,13 @@ module.exports = {
         }),
     ),
   StaticQuery: jest.fn(),
-  useStaticQuery: jest.fn(),
+  useStaticQuery: jest.fn().mockReturnValue({
+    site: {
+      siteMetadata: {
+        author: "YK",
+        title: "static query fake",
+        description: "some desc",
+      },
+    },
+  }),
 };

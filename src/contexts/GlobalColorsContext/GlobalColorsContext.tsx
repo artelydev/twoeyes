@@ -2,15 +2,29 @@ import React, { useState } from "react";
 import { RGBAColor } from "../SettingsContext/SettingsContext";
 import usePalette, { BG_COLOR, COLOR } from "../../hooks/usePalette/usePalette";
 
-type BackgroundContextProps = [[RGBAColor, Function, Function], [RGBAColor, Function, Function]];
+/**
+ * Global colors context props type
+ */
+export type GlobalColorsContextProps = [
+  [RGBAColor, Function, Function],
+  [RGBAColor, Function, Function],
+];
 
-const GlobalColorsContext = React.createContext<BackgroundContextProps>([
+/**
+ * Global colors context that contains global background and font color and
+ * methods to change them
+ */
+const GlobalColorsContext = React.createContext<GlobalColorsContextProps>([
   // eslint-disable-next-line @typescript-eslint/no-empty-function
   [BG_COLOR, () => {}, () => {}],
   // eslint-disable-next-line @typescript-eslint/no-empty-function
   [COLOR, () => {}, () => {}],
 ]);
 
+/**
+ * Global colors context provider
+ * @param props - to be passed through
+ */
 export const GlobalColorsContextProvider = (props: any) => {
   const { bgColor, color } = usePalette();
   const [applicationBackground, setApplicationBackground] = useState(bgColor);

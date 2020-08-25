@@ -7,7 +7,7 @@
 // You can delete this file if you're not using it
 
 import React from "react";
-import AppProviders from "./src/components/AppProviders.tsx";
+import AppProviders from "./src/components/AppProviders/AppProviders.tsx";
 import "./src/App.scss";
 
 // highlight-start

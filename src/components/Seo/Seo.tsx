@@ -3,6 +3,9 @@ import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
 
+/**
+ * Seo component props type
+ */
 type SeoProps = {
   description?: string;
   lang?: string;
@@ -10,6 +13,13 @@ type SeoProps = {
   title?: string;
 };
 
+/**
+ * Seo component to be included into various pages
+ * @param description - of a page
+ * @param lang - of a page
+ * @param meta - of a page
+ * @param title - of a page
+ */
 const Seo: React.FC<SeoProps> = ({ description = "", lang = "en", meta = [], title }) => {
   const { site } = useStaticQuery(
     graphql`

@@ -8,7 +8,7 @@ import usePalette from "../../hooks/usePalette/usePalette";
 // eslint-disable-next-line import/no-cycle
 import useNavigation from "../../hooks/useNavigation/useNavigation";
 
-type IntroLevelProps = {
+export type IntroLevelProps = {
   hint: React.ReactNode;
 };
 

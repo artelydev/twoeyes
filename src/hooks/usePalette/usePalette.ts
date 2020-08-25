@@ -1,12 +1,18 @@
 import { RGBAColor } from "../../contexts/SettingsContext/SettingsContext";
 
-type Palette = {
+/**
+ * Palette object type
+ */
+export type Palette = {
   color: RGBAColor;
   bgColor: RGBAColor;
   accent: RGBAColor;
   secondary: RGBAColor;
 };
 
+/**
+ * Default palette font color RGBA object
+ */
 export const COLOR: RGBAColor = {
   r: 66,
   g: 66,
@@ -14,6 +20,9 @@ export const COLOR: RGBAColor = {
   a: 1,
 };
 
+/**
+ * Default palette background color RGBA object
+ */
 export const BG_COLOR: RGBAColor = {
   r: 254,
   g: 255,
@@ -21,6 +30,9 @@ export const BG_COLOR: RGBAColor = {
   a: 1,
 };
 
+/**
+ * Default palette accent color RGBA object
+ */
 export const ACCENT: RGBAColor = {
   r: 252,
   g: 252,
@@ -28,6 +40,9 @@ export const ACCENT: RGBAColor = {
   a: 1,
 };
 
+/**
+ * Default palette secondary color RGBA object
+ */
 export const SECONDARY: RGBAColor = {
   r: 201,
   g: 201,
@@ -35,6 +50,9 @@ export const SECONDARY: RGBAColor = {
   a: 1,
 };
 
+/**
+ * Hook that enables a component ot use a shared palette
+ */
 const usePalette = (): Palette => ({
   color: COLOR,
   bgColor: BG_COLOR,

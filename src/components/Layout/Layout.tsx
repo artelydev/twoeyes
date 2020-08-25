@@ -8,10 +8,17 @@ import Navigation from "../Navigation";
 import FullscreenContainer from "../FullscreenContainer/FullscreenContainer";
 import useGlobalBackground from "../../hooks/useGlobalColors";
 
+/**
+ * Layout component props type
+ */
 type LayoutProps = {
   children: React.ReactNode;
 };
 
+/**
+ * Layout component
+ * @param children - to be rendered inside main section of layout
+ */
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   const [[bgRGBAColor], [fontRGBAColor]] = useGlobalBackground();
   const bgColor = `rgb(${bgRGBAColor.r}, ${bgRGBAColor.g}, ${bgRGBAColor.b})`;

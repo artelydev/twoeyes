@@ -4,7 +4,7 @@ import { ArrowBack, ArrowForward, Cached, Settings } from "@material-ui/icons";
 import styles from "./Navigation.module.scss";
 import useNavigation from "../../hooks/useNavigation/useNavigation";
 
-type NavigationProps = {
+export type NavigationProps = {
   bgColor: string;
   color: string;
 };

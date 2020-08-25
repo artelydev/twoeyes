@@ -10,12 +10,21 @@ import useGlobalColors from "../../hooks/useGlobalColors/useGlobalColors";
 // eslint-disable-next-line import/no-cycle
 import useNavigation from "../../hooks/useNavigation/useNavigation";
 
-type ColorSettingsLevelProps = {
+/**
+ * Lense color settings level props
+ */
+export type ColorSettingsLevelProps = {
   color: RGBAColor;
   changeColor: Function;
   hint: React.ReactNode;
 };
 
+/**
+ * Lense color settings component
+ * @param color - current lense color setting
+ * @param changeColor - function to change a lense color
+ * @param hint - to be provided for a user
+ */
 const ColorSettingsLevel: React.FC<ColorSettingsLevelProps> = ({ color, changeColor, hint }) => {
   const [invertColor] = useColorInverter();
   const [, , , , , currentLevelCounter] = useNavigation();

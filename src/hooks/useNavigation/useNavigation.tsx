@@ -9,25 +9,44 @@ import Exercise from "../../components/Exercise/Exercise";
 // eslint-disable-next-line import/no-cycle
 import IntroLevel from "../../components/IntroLevel/IntroLevel";
 
+/**
+ * Navigation settings level type
+ */
 type SettingsLevelType = {
   type: "SettingsLevel";
   component: React.ReactNode;
 };
 
+/**
+ * Navigation intro level type
+ */
 type IntroLevelType = {
   type: "IntroLevel";
   component: React.ReactNode;
 };
 
+/**
+ * Navigation exercise level type
+ */
 type ExerciseLevelType = {
   type: "ExerciseLevel";
   component: React.ReactNode;
 };
 
+/**
+ * General navigation polymorphic type
+ */
 type ApplicationLevel = ExerciseLevelType | IntroLevelType | SettingsLevelType;
 
-type UseNavigationReturn = [React.ReactNode, Function, Function, Function, Function, number];
+/**
+ * Use navigation hook return type
+ */
+export type UseNavigationReturn = [React.ReactNode, Function, Function, Function, Function, number];
 
+/**
+ * Hook that enables a component to use NavigationContext as well as additional
+ * navigation levels helper functions
+ */
 const useNavigation = (): UseNavigationReturn => {
   const { leftLense, changeLeftLense, rightLense, changeRightLense } = useSettings();
 

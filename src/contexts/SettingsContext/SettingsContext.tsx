@@ -1,6 +1,9 @@
 import React from "react";
 import { useLocalStorage } from "react-use";
 
+/**
+ * RGBA object color type
+ */
 export type RGBAColor = {
   r: number;
   g: number;
@@ -8,13 +11,19 @@ export type RGBAColor = {
   a: number;
 };
 
-type SettingsContextProps = {
+/**
+ * Settings context props type
+ */
+export type SettingsContextProps = {
   rightLense: RGBAColor;
   changeRightLense: Function;
   leftLense: RGBAColor;
   changeLeftLense: Function;
 };
 
+/**
+ * Left lense RGBA default color to be initially set
+ */
 const LEFT_LENSE_DEFAULT = {
   r: 255,
   g: 0,
@@ -22,6 +31,9 @@ const LEFT_LENSE_DEFAULT = {
   a: 1,
 };
 
+/**
+ * Right lense RGBA default color to be initially set
+ */
 const RIGHT_LENSE_DEFAULT = {
   r: 0,
   g: 255,
@@ -29,6 +41,9 @@ const RIGHT_LENSE_DEFAULT = {
   a: 1,
 };
 
+/**
+ * Settings context to be used to provide lenses color functionality
+ */
 const SettingsContext = React.createContext<SettingsContextProps>({
   rightLense: RIGHT_LENSE_DEFAULT,
   leftLense: LEFT_LENSE_DEFAULT,
@@ -38,6 +53,11 @@ const SettingsContext = React.createContext<SettingsContextProps>({
   changeLeftLense: () => {},
 });
 
+/**
+ * Settings context provider to share the common lenses color functionality
+ *
+ * @param props - to be passed through
+ */
 export const SettingsContextProvider: React.FC = (props: any) => {
   const [leftLense, changeLeftLense] = useLocalStorage<RGBAColor>(
     "LEFT_LENSE_COLOR",

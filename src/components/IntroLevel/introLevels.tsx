@@ -21,12 +21,12 @@ const introLevels: IntroLevel[] = [
     ),
   },
   {
-    hint: (
+    hint:
+      /* prettier-ignore */
       <span>
-        you can also try to add this application to the <b>home screen</b> <Typist.Delay ms={700} />{" "}
-        and use it on your phone
-      </span>
-    ),
+        you can also try to add this application to the <b>home screen</b>{" "}
+        <Typist.Delay ms={700} /> and use it on your phone
+      </span>,
   },
   {
     hint: "yet it is still recommended to exercise on bigger screens",
