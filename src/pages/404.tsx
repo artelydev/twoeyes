@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { navigate } from "gatsby";
 
 const NotFoundPage: React.FC = () => {
-  navigate("/");
+  useEffect(() => {
+    navigate("/");
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return null;
 };

@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-opinionated-starter",
-  "description": "A very opinionated TypeScript netlify-ready gatsby starter",
-  "version": "0.4.10",
+  "name": "twoeyes",
+  "description": "Binocular trainer",
+  "version": "0.1.0",
   "author": "Yaroslav Kasperovych <ilovewindows96@gmail.com>",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.30",
@@ -115,10 +115,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/datacrafts-io/gatsby-opinionated-starter"
+    "url": "https://github.com/cxspxr/twoeyes"
   },
   "bugs": {
-    "url": "https://github.com/datacrafts-io/gatsby-opinionated-starter/issues"
+    "url": "https://github.com/cxspxr/twoeyes/issues"
   },
   "remarkConfig": {
     "plugins": [
