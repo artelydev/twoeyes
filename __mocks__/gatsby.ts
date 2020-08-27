@@ -3,6 +3,7 @@ const gatsby = jest.requireActual("gatsby");
 
 module.exports = {
   ...gatsby,
+  navigate: jest.fn(),
   graphql: jest.fn(),
   Link: jest
     .fn()
@@ -30,6 +31,11 @@ module.exports = {
         author: "YK",
         title: "static query fake",
         description: "some desc",
+      },
+    },
+    placeholderImage: {
+      childImageSharp: {
+        fluid: "eye.png",
       },
     },
   }),
