@@ -1,5 +1,6 @@
 import React from "react";
 import { shallow, ShallowWrapper } from "enzyme";
+import { render } from "@testing-library/react";
 import Layout from "../Layout";
 import Seo from "../../Seo/Seo";
 import Navigation from "../../Navigation/Navigation";
@@ -44,6 +45,34 @@ describe("Layout component", () => {
 
     it("uses global colors", () => {
       expect(useGlobalColors).toBeCalledTimes(1);
+    });
+  });
+
+  describe("user behavior", () => {
+    let getByTestId: Function;
+    let getByText: Function;
+
+    const FakeComponent: React.FC = () => {
+      return <div>fake content</div>;
+    };
+
+    beforeEach(() => {
+      const wrapper = render(
+        <Layout>
+          <FakeComponent />
+        </Layout>,
+      );
+
+      getByTestId = wrapper.getByTestId;
+      getByText = wrapper.getByText;
+    });
+
+    it("shows content of child component", () => {
+      expect(getByText(/fake content/)).toBeInTheDocument();
+    });
+
+    it("shows layout content element", () => {
+      expect(getByTestId("layout-content")).toBeInTheDocument();
     });
   });
 });

@@ -1,5 +1,6 @@
 import React from "react";
 import { shallow, ShallowWrapper } from "enzyme";
+import { render } from "@testing-library/react";
 import AppProviders from "../AppProviders";
 import { NavigationContextProvider } from "../../../contexts/NavigationContext/NavigationContext";
 import { SettingsContextProvider } from "../../../contexts/SettingsContext/SettingsContext";
@@ -32,6 +33,25 @@ describe("AppProviders component", () => {
 
     it("renders SettingsContextProvider", () => {
       expect(wrapper.find(SettingsContextProvider).length).toEqual(1);
+    });
+  });
+
+  describe("user behavior", () => {
+    const FakeComponent: React.FC = () => {
+      return <div>fake component</div>;
+    };
+    let getByText: Function;
+
+    beforeEach(() => {
+      getByText = render(
+        <AppProviders>
+          <FakeComponent />
+        </AppProviders>,
+      ).getByText;
+    });
+
+    it("shows child component content to a user", () => {
+      expect(getByText(/fake component/)).toBeInTheDocument();
     });
   });
 });

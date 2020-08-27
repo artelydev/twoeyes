@@ -8,10 +8,17 @@ import usePalette from "../../hooks/usePalette/usePalette";
 // eslint-disable-next-line import/no-cycle
 import useNavigation from "../../hooks/useNavigation/useNavigation";
 
+/**
+ * Navigation intro level props type
+ */
 export type IntroLevelProps = {
   hint: React.ReactNode;
 };
 
+/**
+ * Navigation intro level component
+ * @param hint - intro hint to be shown to a user
+ */
 const IntroLevel: React.FC<IntroLevelProps> = ({ hint }) => {
   const [, , , , , currentLevelCounter] = useNavigation();
 
@@ -35,6 +42,7 @@ const IntroLevel: React.FC<IntroLevelProps> = ({ hint }) => {
           color: hintStyleColor,
         }}
         className={styles.level__hint_top}
+        data-testid="intro-level-top-hint"
       >
         <Typist key={currentLevelCounter}>{hint}</Typist>
       </h1>
@@ -43,6 +51,7 @@ const IntroLevel: React.FC<IntroLevelProps> = ({ hint }) => {
           color: hintStyleColor,
         }}
         className={styles.level__hint_bottom}
+        data-testid="intro-level-bottom-hint"
       >
         <Typist>
           <Typist.Delay ms={2000} />

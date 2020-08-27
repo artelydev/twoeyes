@@ -27,7 +27,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <FullscreenContainer style={{ backgroundColor: bgColor }} className={styles.layout__container}>
       <Seo />
-      <main className={styles.layout__main}>{children}</main>
+      <main data-testid="layout-content" className={styles.layout__main}>
+        {children}
+      </main>
       <Box className={styles.layout__navigation}>
         <Navigation color={color} bgColor={bgColor} />
       </Box>

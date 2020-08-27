@@ -60,10 +60,11 @@ const ColorSettingsLevel: React.FC<ColorSettingsLevelProps> = ({ color, changeCo
           color: hintStyleColor,
         }}
         className={styles.level__hint_top}
+        data-testid="color-settings-level-hint"
       >
         <Typist key={currentLevelCounter}>{hint}</Typist>
       </h1>
-      <Box className={styles.level__picker}>
+      <Box data-testid="color-settings-level-picker" className={styles.level__picker}>
         <ChromePicker
           color={color}
           onChange={(newColor) => {

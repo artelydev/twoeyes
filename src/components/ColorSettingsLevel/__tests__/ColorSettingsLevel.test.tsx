@@ -1,5 +1,6 @@
 import React from "react";
 import { ReactWrapper, mount } from "enzyme";
+import { render, waitFor } from "@testing-library/react";
 import Typist from "react-typist";
 import { ChromePicker } from "react-color";
 import ColorSettingsLevel, { ColorSettingsLevelProps } from "../ColorSettingsLevel";
@@ -58,6 +59,42 @@ describe("ColorSettingsLevel component", () => {
 
     it("renders ChromePicker", () => {
       expect(wrapper.find(ChromePicker).length).toEqual(1);
+    });
+  });
+
+  describe("user behavior", () => {
+    let getByTestId: Function;
+    let getByText: Function;
+    let queryByText: Function;
+
+    beforeEach(() => {
+      // eslint-disable-next-line react/jsx-props-no-spreading
+      const wrapper = render(<ColorSettingsLevel {...defaultProps} />);
+
+      getByTestId = wrapper.getByTestId;
+      getByText = wrapper.getByText;
+      queryByText = wrapper.queryByText;
+    });
+
+    it("shows hint element", () => {
+      expect(getByTestId("color-settings-level-hint")).toBeInTheDocument();
+    });
+
+    it("shows color picker element", () => {
+      expect(getByTestId("color-settings-level-picker")).toBeInTheDocument();
+    });
+
+    it("doesn't show hint until it's typed", () => {
+      expect(queryByText(new RegExp(defaultProps.hint as string))).not.toBeInTheDocument();
+    });
+
+    it("shows hint text after it is typed", async () => {
+      await waitFor(
+        () => expect(getByText(new RegExp(defaultProps.hint as string))).toBeInTheDocument(),
+        {
+          timeout: 5000,
+        },
+      );
     });
   });
 });

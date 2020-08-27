@@ -22,7 +22,11 @@ const FullscreenContainer: React.FC<FullscreenContainerProps> = ({
   style,
 }) => {
   return (
-    <div style={style} className={`${styles.fullscreen_container} ${className || ""}`}>
+    <div
+      data-testid="fullscreen-container"
+      style={style}
+      className={`${styles.fullscreen_container} ${className || ""}`}
+    >
       {children}
     </div>
   );
