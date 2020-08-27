@@ -13,14 +13,10 @@ import Img from "gatsby-image";
  * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-type ImageProps = {
-  path: string;
-};
-
-const Image: React.FC<ImageProps> = ({ path }) => {
+const Image: React.FC = () => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "${path}") {
+      placeholderImage: file(relativePath: { eq: "eye.png" }) {
         childImageSharp {
           fluid(maxWidth: 300) {
             ...GatsbyImageSharpFluid

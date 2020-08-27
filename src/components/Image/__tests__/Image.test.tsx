@@ -11,7 +11,7 @@ describe("Image component", () => {
     let wrapper: ShallowWrapper;
 
     beforeEach(() => {
-      wrapper = shallow(<Image path="eye.png" />);
+      wrapper = shallow(<Image />);
     });
 
     it("utilizes gatsby useStaticQuery", () => {
