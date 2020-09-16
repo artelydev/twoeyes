@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { mount } from "enzyme";
 import useColorInverter, { ColorInverter } from "../useColorInverter";
-import { RGBAColor } from "../../../contexts/SettingsContext/SettingsContext";
+import { RGBColor } from "../../../contexts/SettingsContext/SettingsContext";
 
 describe("useColorInverter hook", () => {
   describe("implementation", () => {
@@ -14,18 +14,16 @@ describe("useColorInverter hook", () => {
         });
 
         it("can successfully invert a color through color inverter", () => {
-          const invertedColor: RGBAColor = invertColor({
+          const invertedColor: RGBColor = invertColor({
             r: 255,
             g: 0,
             b: 0,
-            a: 1,
           });
 
           expect(invertedColor).toEqual({
-            r: 0,
+            r: 255,
             g: 255,
             b: 255,
-            a: 1,
           });
         });
 

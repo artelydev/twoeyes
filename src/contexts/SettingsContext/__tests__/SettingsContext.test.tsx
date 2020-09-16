@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { mount, shallow, ShallowWrapper } from "enzyme";
 import SettingsContext, {
-  RGBAColor,
+  RGBColor,
   SettingsContextProps,
   SettingsContextProvider,
 } from "../SettingsContext";
@@ -17,18 +17,16 @@ describe("SettingsContext", () => {
           changeLeftLense,
         }: SettingsContextProps = useContext(SettingsContext);
 
-        const newLeftLenseColor: RGBAColor = {
+        const newLeftLenseColor: RGBColor = {
           r: 123,
           g: 124,
           b: 125,
-          a: 0.8,
         };
 
-        const newRightLenseColor: RGBAColor = {
+        const newRightLenseColor: RGBColor = {
           r: 223,
           g: 224,
           b: 225,
-          a: 0.3,
         };
 
         useEffect(() => {
@@ -37,8 +35,7 @@ describe("SettingsContext", () => {
               r: 255,
               g: 0,
               b: 0,
-              a: 1,
-            } as RGBAColor);
+            } as RGBColor);
           });
 
           it("provides right lense color initially set to cyan", () => {
@@ -46,8 +43,7 @@ describe("SettingsContext", () => {
               r: 0,
               g: 255,
               b: 255,
-              a: 1,
-            } as RGBAColor);
+            } as RGBColor);
           });
 
           it("provides right lense setter helper", () => {
@@ -75,7 +71,6 @@ describe("SettingsContext", () => {
                 r: 255,
                 g: 0,
                 b: 0,
-                a: 1,
               });
             }
           });
@@ -93,7 +88,6 @@ describe("SettingsContext", () => {
                 r: 0,
                 g: 255,
                 b: 255,
-                a: 1,
               });
             }
           });

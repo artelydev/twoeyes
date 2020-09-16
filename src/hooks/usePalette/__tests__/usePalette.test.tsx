@@ -1,34 +1,30 @@
 import React, { useEffect } from "react";
 import { mount } from "enzyme";
 import usePalette, { COLOR, BG_COLOR, ACCENT, SECONDARY, Palette } from "../usePalette";
-import { RGBAColor } from "../../../contexts/SettingsContext/SettingsContext";
+import { RGBColor } from "../../../contexts/SettingsContext/SettingsContext";
 
-const expectedColor: RGBAColor = {
+const expectedColor: RGBColor = {
   r: 66,
   g: 66,
   b: 66,
-  a: 1,
 };
 
-const expectedBgColor: RGBAColor = {
+const expectedBgColor: RGBColor = {
   r: 254,
   g: 255,
   b: 234,
-  a: 1,
 };
 
-const expectedAccentColor: RGBAColor = {
+const expectedAccentColor: RGBColor = {
   r: 252,
   g: 252,
   b: 98,
-  a: 1,
 };
 
-const expectedSecondaryColor: RGBAColor = {
+const expectedSecondaryColor: RGBColor = {
   r: 201,
   g: 201,
   b: 201,
-  a: 1,
 };
 
 describe("usePalette hook", () => {

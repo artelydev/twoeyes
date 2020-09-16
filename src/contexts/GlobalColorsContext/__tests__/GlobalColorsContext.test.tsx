@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from "react";
 import { mount, shallow, ShallowWrapper } from "enzyme";
 import GlobalColorsContext, { GlobalColorsContextProvider } from "../GlobalColorsContext";
 import { BG_COLOR, COLOR } from "../../../hooks/usePalette/usePalette";
-import { RGBAColor } from "../../SettingsContext/SettingsContext";
+import { RGBColor } from "../../SettingsContext/SettingsContext";
 
 describe("GlobalColorsContext", () => {
   describe("implementation", () => {
@@ -12,18 +12,16 @@ describe("GlobalColorsContext", () => {
           GlobalColorsContext,
         );
 
-        const newBgColor: RGBAColor = {
+        const newBgColor: RGBColor = {
           r: 123,
           g: 124,
           b: 125,
-          a: 1,
         };
 
-        const newColor: RGBAColor = {
+        const newColor: RGBColor = {
           r: 223,
           g: 224,
           b: 225,
-          a: 1,
         };
 
         useEffect(() => {

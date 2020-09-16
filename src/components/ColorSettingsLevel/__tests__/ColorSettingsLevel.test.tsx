@@ -20,7 +20,6 @@ describe("ColorSettingsLevel component", () => {
       r: 255,
       g: 254,
       b: 253,
-      a: 0.1,
     },
   };
 

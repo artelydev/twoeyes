@@ -14,11 +14,11 @@ describe("useSettings hook", () => {
       }: SettingsContextProps = useSettings();
 
       useEffect(() => {
-        it("provides right lense RGBA color object", () => {
+        it("provides right lense RGB color object", () => {
           expect(rightLense).toBeInstanceOf(Object);
         });
 
-        it("provides left lense RGBA color object", () => {
+        it("provides left lense RGB color object", () => {
           expect(leftLense).toBeInstanceOf(Object);
         });
 

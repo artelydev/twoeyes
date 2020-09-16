@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import { RGBAColor } from "../SettingsContext/SettingsContext";
+import { RGBColor } from "../SettingsContext/SettingsContext";
 import usePalette, { BG_COLOR, COLOR } from "../../hooks/usePalette/usePalette";
 
 /**
  * Global colors context props type
  */
 export type GlobalColorsContextProps = [
-  [RGBAColor, Function, Function],
-  [RGBAColor, Function, Function],
+  [RGBColor, Function, Function],
+  [RGBColor, Function, Function],
 ];
 
 /**

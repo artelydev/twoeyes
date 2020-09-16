@@ -20,9 +20,9 @@ type LayoutProps = {
  * @param children - to be rendered inside main section of layout
  */
 const Layout: React.FC<LayoutProps> = ({ children }) => {
-  const [[bgRGBAColor], [fontRGBAColor]] = useGlobalBackground();
-  const bgColor = `rgb(${bgRGBAColor.r}, ${bgRGBAColor.g}, ${bgRGBAColor.b})`;
-  const color = `rgb(${fontRGBAColor.r}, ${fontRGBAColor.g}, ${fontRGBAColor.b})`;
+  const [[bgRGBColor], [fontRGBColor]] = useGlobalBackground();
+  const bgColor = `rgb(${bgRGBColor.r}, ${bgRGBColor.g}, ${bgRGBColor.b})`;
+  const color = `rgb(${fontRGBColor.r}, ${fontRGBColor.g}, ${fontRGBColor.b})`;
 
   return (
     <FullscreenContainer style={{ backgroundColor: bgColor }} className={styles.layout__container}>

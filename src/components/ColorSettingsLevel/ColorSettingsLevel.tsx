@@ -3,7 +3,7 @@ import { ChromePicker } from "react-color";
 import { Box } from "@material-ui/core";
 import Typist from "react-typist";
 import styles from "../Levels.module.scss";
-import { RGBAColor } from "../../contexts/SettingsContext";
+import { RGBColor } from "../../contexts/SettingsContext";
 import useColorInverter from "../../hooks/useColorInverter/useColorInverter";
 import "../TypistCursor.scss";
 import useGlobalColors from "../../hooks/useGlobalColors/useGlobalColors";
@@ -14,7 +14,7 @@ import useNavigation from "../../hooks/useNavigation/useNavigation";
  * Lense color settings level props
  */
 export type ColorSettingsLevelProps = {
-  color: RGBAColor;
+  color: RGBColor;
   changeColor: Function;
   hint: React.ReactNode;
 };
@@ -34,8 +34,8 @@ const ColorSettingsLevel: React.FC<ColorSettingsLevelProps> = ({ color, changeCo
     [, setGlobalColor, resetGlobalColor],
   ] = useGlobalColors();
 
-  const hintRGBColor: RGBAColor = invertColor(color);
-  const bgRGBColor: RGBAColor = color;
+  const hintRGBColor: RGBColor = invertColor(color);
+  const bgRGBColor: RGBColor = color;
   const hintStyleColor = `rgb(${hintRGBColor.r}, ${hintRGBColor.g}, ${hintRGBColor.b})`;
   const bgStyleColor = `rgb(${bgRGBColor.r}, ${bgRGBColor.g}, ${bgRGBColor.b})`;
 
@@ -66,6 +66,7 @@ const ColorSettingsLevel: React.FC<ColorSettingsLevelProps> = ({ color, changeCo
       </h1>
       <Box data-testid="color-settings-level-picker" className={styles.level__picker}>
         <ChromePicker
+          disableAlpha
           color={color}
           onChange={(newColor) => {
             changeColor(newColor.rgb);

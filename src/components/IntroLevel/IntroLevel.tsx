@@ -2,7 +2,7 @@ import React from "react";
 import Typist from "react-typist";
 import { Box } from "@material-ui/core";
 import styles from "../Levels.module.scss";
-import { RGBAColor } from "../../contexts/SettingsContext";
+import { RGBColor } from "../../contexts/SettingsContext";
 import "../TypistCursor.scss";
 import usePalette from "../../hooks/usePalette/usePalette";
 // eslint-disable-next-line import/no-cycle
@@ -24,10 +24,10 @@ const IntroLevel: React.FC<IntroLevelProps> = ({ hint }) => {
 
   const { color, bgColor } = usePalette();
 
-  const hintRGBColor: RGBAColor = color;
-  const bgRGBColor: RGBAColor = bgColor;
+  const hintRGBColor: RGBColor = color;
+  const bgRGBColor: RGBColor = bgColor;
 
-  const bgStyleColor = `rgba(${bgRGBColor.r}, ${bgRGBColor.g}, ${bgRGBColor.b}, ${bgRGBColor.a})`;
+  const bgStyleColor = `rgb(${bgRGBColor.r}, ${bgRGBColor.g}, ${bgRGBColor.b})`;
   const hintStyleColor = `rgb(${hintRGBColor.r}, ${hintRGBColor.g}, ${hintRGBColor.b})`;
 
   return (
