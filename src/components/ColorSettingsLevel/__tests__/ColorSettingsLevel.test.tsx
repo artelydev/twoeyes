@@ -2,13 +2,11 @@ import React from "react";
 import { ReactWrapper, mount } from "enzyme";
 import { render, waitFor } from "@testing-library/react";
 import Typist from "react-typist";
-import { ChromePicker } from "react-color";
+import { CirclePicker } from "react-color";
 import ColorSettingsLevel, { ColorSettingsLevelProps } from "../ColorSettingsLevel";
-import useColorInverter from "../../../hooks/useColorInverter/useColorInverter";
 import useNavigation from "../../../hooks/useNavigation/useNavigation";
 import useGlobalColors from "../../../hooks/useGlobalColors/useGlobalColors";
 
-jest.mock("../../../hooks/useColorInverter/useColorInverter");
 jest.mock("../../../hooks/useNavigation/useNavigation");
 jest.mock("../../../hooks/useGlobalColors/useGlobalColors");
 
@@ -36,10 +34,6 @@ describe("ColorSettingsLevel component", () => {
       jest.clearAllMocks();
     });
 
-    it("uses color inverter", () => {
-      expect(useColorInverter).toBeCalledTimes(1);
-    });
-
     it("uses navigation", () => {
       expect(useNavigation).toBeCalledTimes(1);
     });
@@ -56,8 +50,8 @@ describe("ColorSettingsLevel component", () => {
       expect(wrapper.find(Typist).length).toEqual(1);
     });
 
-    it("renders ChromePicker", () => {
-      expect(wrapper.find(ChromePicker).length).toEqual(1);
+    it("renders CirclePicker", () => {
+      expect(wrapper.find(CirclePicker).length).toEqual(1);
     });
   });
 

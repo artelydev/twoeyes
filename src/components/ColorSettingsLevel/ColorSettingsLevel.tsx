@@ -1,14 +1,15 @@
 import React, { useEffect } from "react";
-import { ChromePicker } from "react-color";
+import { CirclePicker } from "react-color";
 import { Box } from "@material-ui/core";
+import { VisibilityOff } from "@material-ui/icons";
 import Typist from "react-typist";
 import styles from "../Levels.module.scss";
 import { RGBColor } from "../../contexts/SettingsContext";
-import useColorInverter from "../../hooks/useColorInverter/useColorInverter";
 import "../TypistCursor.scss";
 import useGlobalColors from "../../hooks/useGlobalColors/useGlobalColors";
 // eslint-disable-next-line import/no-cycle
 import useNavigation from "../../hooks/useNavigation/useNavigation";
+import COLORS from "./colors";
 
 /**
  * Lense color settings level props
@@ -26,26 +27,16 @@ export type ColorSettingsLevelProps = {
  * @param hint - to be provided for a user
  */
 const ColorSettingsLevel: React.FC<ColorSettingsLevelProps> = ({ color, changeColor, hint }) => {
-  const [invertColor] = useColorInverter();
   const [, , , , , currentLevelCounter] = useNavigation();
-
   const [
     [, setGlobalBackground, resetGlobalBackground],
     [, setGlobalColor, resetGlobalColor],
   ] = useGlobalColors();
 
-  const hintRGBColor: RGBColor = invertColor(color);
-  const bgRGBColor: RGBColor = color;
-  const hintStyleColor = `rgb(${hintRGBColor.r}, ${hintRGBColor.g}, ${hintRGBColor.b})`;
-  const bgStyleColor = `rgb(${bgRGBColor.r}, ${bgRGBColor.g}, ${bgRGBColor.b})`;
-
   useEffect(() => {
-    setGlobalBackground(bgRGBColor);
-    setGlobalColor(hintRGBColor);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [setGlobalColor, setGlobalBackground, hintStyleColor, bgStyleColor]);
+    setGlobalColor({ r: 255, g: 255, b: 255 });
+    setGlobalBackground({ r: 0, g: 0, b: 0 });
 
-  useEffect(() => {
     return () => {
       resetGlobalBackground();
       resetGlobalColor();
@@ -55,9 +46,10 @@ const ColorSettingsLevel: React.FC<ColorSettingsLevelProps> = ({ color, changeCo
 
   return (
     <Box className={styles.level__container}>
+      <VisibilityOff fontSize="large" htmlColor={`rgb(${color.r}, ${color.g}, ${color.b})`} />
       <h1
         style={{
-          color: hintStyleColor,
+          color: "white",
         }}
         className={styles.level__hint_top}
         data-testid="color-settings-level-hint"
@@ -65,8 +57,8 @@ const ColorSettingsLevel: React.FC<ColorSettingsLevelProps> = ({ color, changeCo
         <Typist key={currentLevelCounter}>{hint}</Typist>
       </h1>
       <Box data-testid="color-settings-level-picker" className={styles.level__picker}>
-        <ChromePicker
-          disableAlpha
+        <CirclePicker
+          colors={COLORS}
           color={color}
           onChange={(newColor) => {
             changeColor(newColor.rgb);

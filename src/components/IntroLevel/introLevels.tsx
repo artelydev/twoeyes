@@ -10,6 +10,35 @@ const introLevels: IntroLevel[] = [
     hint: "this application serves as a try to restore binocular vision",
   },
   {
+    hint: "please, be aware that this is not an official medical treatment",
+  },
+  {
+    hint: (
+      <span>
+        be aware that it is <b>strongly recommended to treat strabismus or amblyopia</b> if you have
+        it
+      </span>
+    ),
+  },
+  {
+    hint: "because it might be not possible for you to see the right picture",
+  },
+  {
+    hint: (
+      <span>
+        and yet again, <b>if you have strabismus or amblyopia</b>, please <b>at least</b> do as many{" "}
+        <a
+          href="https://www.webmd.com/eye-health/eye-exercises-strabismus"
+          rel="noreferrer"
+          target="_blank"
+        >
+          eye muscle exercises
+        </a>{" "}
+        as you can every day
+      </span>
+    ),
+  },
+  {
     hint: "in order to start it you need so called anaglyph red-cyan (red-blue) 3D glasses",
   },
   {

@@ -4,11 +4,19 @@ import { ArrowBack, ArrowForward, Cached, Settings } from "@material-ui/icons";
 import styles from "./Navigation.module.scss";
 import useNavigation from "../../hooks/useNavigation/useNavigation";
 
+/**
+ * Navigation component props type
+ */
 export type NavigationProps = {
   bgColor: string;
   color: string;
 };
 
+/**
+ * Navigation component
+ * @param bgColor - to be set to navigation
+ * @param color - to be set to navigation buttons
+ */
 const Navigation: React.FC<NavigationProps> = ({ bgColor, color }) => {
   const [, nextLevel, previousLevel, resetLevels, goToSettings] = useNavigation();
 

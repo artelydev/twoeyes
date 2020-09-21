@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import Typist from "react-typist";
 import NavigationContext from "../../contexts/NavigationContext/NavigationContext";
 import useSettings from "../useSettings/useSettings";
 import introLevels from "../../components/IntroLevel/introLevels";
@@ -68,8 +67,9 @@ const useNavigation = (): UseNavigationReturn => {
           changeColor={changeLeftLense}
           hint={
             <span>
-              now, close your <b>left</b> eye <Typist.Delay ms={1000} /> and adjust <b>right</b>{" "}
-              lense color so that there would be no background at all
+              now, choose the <b>lightest</b> color so that there would be eye icon{" "}
+              <b>barely visible</b> by <b>left</b> eye yet would be still effortlessly visible by{" "}
+              <b>right</b>
             </span>
           }
         />
@@ -83,8 +83,8 @@ const useNavigation = (): UseNavigationReturn => {
           changeColor={changeRightLense}
           hint={
             <span>
-              close your <b>right</b> eye <Typist.Delay ms={1000} /> and adjust <b>left</b> lense
-              color so that there would be no background at all
+              choose the <b>lightest</b> color so that there would be eye icon <b>barely visible</b>{" "}
+              by <b>right</b> eye yet would be still effortlessly visible by <b>left</b>
             </span>
           }
         />
