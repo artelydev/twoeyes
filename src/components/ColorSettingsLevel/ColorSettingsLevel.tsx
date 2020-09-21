@@ -6,6 +6,8 @@ import Typist from "react-typist";
 import styles from "../Levels.module.scss";
 import { RGBColor } from "../../contexts/SettingsContext";
 import "../TypistCursor.scss";
+// eslint-disable-next-line import/no-cycle
+import WithKeyboardNavigation from "../../hocs/WithKeyboardNavigation/WithKeyboardNavigation";
 import useGlobalColors from "../../hooks/useGlobalColors/useGlobalColors";
 // eslint-disable-next-line import/no-cycle
 import useNavigation from "../../hooks/useNavigation/useNavigation";
@@ -26,7 +28,11 @@ export type ColorSettingsLevelProps = {
  * @param changeColor - function to change a lense color
  * @param hint - to be provided for a user
  */
-const ColorSettingsLevel: React.FC<ColorSettingsLevelProps> = ({ color, changeColor, hint }) => {
+export const ColorSettingsLevel: React.FC<ColorSettingsLevelProps> = ({
+  color,
+  changeColor,
+  hint,
+}) => {
   const [, , , , , currentLevelCounter] = useNavigation();
   const [
     [, setGlobalBackground, resetGlobalBackground],
@@ -69,4 +75,4 @@ const ColorSettingsLevel: React.FC<ColorSettingsLevelProps> = ({ color, changeCo
   );
 };
 
-export default ColorSettingsLevel;
+export default WithKeyboardNavigation(ColorSettingsLevel);

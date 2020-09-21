@@ -2,7 +2,7 @@ import React from "react";
 import { shallow, ShallowWrapper } from "enzyme";
 import Typist from "react-typist";
 import { render, waitFor } from "@testing-library/react";
-import IntroLevel, { IntroLevelProps } from "../IntroLevel";
+import { IntroLevel, IntroLevelProps } from "../IntroLevel";
 import useNavigation from "../../../hooks/useNavigation/useNavigation";
 import usePalette from "../../../hooks/usePalette/usePalette";
 

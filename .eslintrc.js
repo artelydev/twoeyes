@@ -12,6 +12,7 @@ module.exports = {
         "import/no-extraneous-dependencies": "off",
         "@typescript-eslint/no-empty-interface": "warn",
         "react/require-default-props": "off",
+        "import/no-named-as-default": "off",
       },
       settings: {
         "import/resolver": {

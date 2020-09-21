@@ -18,7 +18,6 @@ describe("Navigation component", () => {
     let wrapper: ReactWrapper;
 
     beforeEach(() => {
-      jest.spyOn(React, "useEffect");
       // eslint-disable-next-line react/jsx-props-no-spreading
       wrapper = mount(<Navigation {...defaultProps} />);
     });
@@ -29,10 +28,6 @@ describe("Navigation component", () => {
 
     it("uses navigation hook", () => {
       expect(useNavigation).toBeCalledTimes(1);
-    });
-
-    it("uses side effects", () => {
-      expect(React.useEffect).toBeCalled();
     });
 
     it("renders material bottom navigation component", () => {

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { BottomNavigation, BottomNavigationAction } from "@material-ui/core";
 import { ArrowBack, ArrowForward, Cached, Settings } from "@material-ui/icons";
 import styles from "./Navigation.module.scss";
@@ -19,29 +19,6 @@ export type NavigationProps = {
  */
 const Navigation: React.FC<NavigationProps> = ({ bgColor, color }) => {
   const [, nextLevel, previousLevel, resetLevels, goToSettings] = useNavigation();
-
-  useEffect(() => {
-    const enableNavigation = ({ keyCode }: KeyboardEvent) => {
-      switch (keyCode) {
-        case 13:
-        case 39:
-          return nextLevel();
-        case 37:
-          return previousLevel();
-        case 8:
-          return resetLevels();
-        default:
-          // eslint-disable-next-line @typescript-eslint/no-empty-function
-          return () => {};
-      }
-    };
-
-    document.addEventListener("keydown", enableNavigation, false);
-
-    return () => {
-      document.removeEventListener("keydown", enableNavigation, false);
-    };
-  }, [nextLevel, previousLevel, resetLevels]);
 
   return (
     <BottomNavigation className={styles.navigation} style={{ backgroundColor: bgColor }} showLabels>
