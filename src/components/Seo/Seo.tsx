@@ -10,7 +10,6 @@ type SeoProps = {
   description?: string;
   lang?: string;
   meta?: ({ property?: string; content: string; name?: string } | undefined | null)[];
-  title?: string;
 };
 
 /**
@@ -18,9 +17,8 @@ type SeoProps = {
  * @param description - of a page
  * @param lang - of a page
  * @param meta - of a page
- * @param title - of a page
  */
-const Seo: React.FC<SeoProps> = ({ description = "", lang = "en", meta = [], title }) => {
+const Seo: React.FC<SeoProps> = ({ description = "", lang = "en", meta = [] }) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -44,7 +42,7 @@ const Seo: React.FC<SeoProps> = ({ description = "", lang = "en", meta = [], tit
     },
     {
       property: `og:title`,
-      content: title,
+      content: "twoeyes | become binocular",
     },
     {
       property: `og:description`,
@@ -64,7 +62,7 @@ const Seo: React.FC<SeoProps> = ({ description = "", lang = "en", meta = [], tit
     },
     {
       name: `twitter:title`,
-      content: title,
+      content: "twoeyes | become binocular",
     },
     {
       name: `twitter:description`,
@@ -77,8 +75,7 @@ const Seo: React.FC<SeoProps> = ({ description = "", lang = "en", meta = [], tit
       htmlAttributes={{
         lang,
       }}
-      title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      title="twoeyes | become binocular"
       meta={defaultMetaData.concat(meta)}
     />
   );
@@ -94,7 +91,6 @@ Seo.propTypes = {
       content: PropTypes.string.isRequired,
     }),
   ),
-  title: PropTypes.string,
 };
 
 export default Seo;
