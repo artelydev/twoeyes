@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import NavigationContext from "../../contexts/NavigationContext/NavigationContext";
 import useSettings from "../useSettings/useSettings";
 import introLevels from "../../components/IntroLevel/introLevels";
@@ -97,21 +97,18 @@ const useNavigation = (): UseNavigationReturn => {
     },
   ];
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   const nextLevel = () => {
     if (currentLevelCounter !== undefined && currentLevelCounter + 1 < levels.length) {
       setCurrentLevelCounter(currentLevelCounter + 1);
     }
   };
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   const previousLevel = () => {
     if (currentLevelCounter !== undefined && currentLevelCounter > 0) {
       setCurrentLevelCounter(currentLevelCounter - 1);
     }
   };
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   const resetLevel = () => {
     setCurrentLevelCounter(0);
   };
@@ -121,30 +118,6 @@ const useNavigation = (): UseNavigationReturn => {
 
     setCurrentLevelCounter(firstSettingsLevelIndex > -1 ? firstSettingsLevelIndex : 0);
   };
-
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  useEffect(() => {
-    const enableNavigation = ({ keyCode }: KeyboardEvent) => {
-      switch (keyCode) {
-        case 13:
-        case 39:
-          return nextLevel();
-        case 37:
-          return previousLevel();
-        case 8:
-          return resetLevel();
-        default:
-          // eslint-disable-next-line @typescript-eslint/no-empty-function
-          return () => {};
-      }
-    };
-
-    document.addEventListener("keydown", enableNavigation, false);
-
-    return () => {
-      document.removeEventListener("keydown", enableNavigation, false);
-    };
-  }, [nextLevel, previousLevel, resetLevel]);
 
   return [
     levels[currentLevelCounter].component,

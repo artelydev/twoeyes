@@ -4,7 +4,7 @@ import { Box } from "@material-ui/core";
 import { VisibilityOff } from "@material-ui/icons";
 import Typist from "react-typist";
 import styles from "../Levels.module.scss";
-import { RGBColor } from "../../contexts/SettingsContext";
+import { RGBColor } from "../../contexts/SettingsContext/SettingsContext";
 import "../TypistCursor.scss";
 import useGlobalColors from "../../hooks/useGlobalColors/useGlobalColors";
 // eslint-disable-next-line import/no-cycle

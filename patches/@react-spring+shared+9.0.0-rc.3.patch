@@ -1,0 +1,52 @@
+diff --git a/node_modules/@react-spring/shared/package.json b/node_modules/@react-spring/shared/package.json
+index 95ddb56..d955983 100644
+--- a/node_modules/@react-spring/shared/package.json
++++ b/node_modules/@react-spring/shared/package.json
+@@ -1,27 +1,30 @@
+ {
+-  "_from": "https://registry.npmjs.org/@react-spring/shared/-/shared-9.0.0-rc.3.tgz",
++  "_from": "@react-spring/shared@9.0.0-rc.3",
+   "_id": "@react-spring/shared@9.0.0-rc.3",
+   "_inBundle": false,
+   "_integrity": "sha512-dd50TxwwMWd+dSB0InjndUN9w17cbnMCPy+0sag6zRxxKIo7eOyWSliOtLKxvufgmdC8Prm4M3GT5dmB1yxKEQ==",
+   "_location": "/@react-spring/shared",
+   "_phantomChildren": {},
+   "_requested": {
+-    "type": "remote",
+-    "raw": "@react-spring/shared@https://registry.npmjs.org/@react-spring/shared/-/shared-9.0.0-rc.3.tgz",
++    "type": "version",
++    "registry": true,
++    "raw": "@react-spring/shared@9.0.0-rc.3",
+     "name": "@react-spring/shared",
+     "escapedName": "@react-spring%2fshared",
+     "scope": "@react-spring",
+-    "rawSpec": "https://registry.npmjs.org/@react-spring/shared/-/shared-9.0.0-rc.3.tgz",
+-    "saveSpec": "https://registry.npmjs.org/@react-spring/shared/-/shared-9.0.0-rc.3.tgz",
+-    "fetchSpec": "https://registry.npmjs.org/@react-spring/shared/-/shared-9.0.0-rc.3.tgz"
++    "rawSpec": "9.0.0-rc.3",
++    "saveSpec": null,
++    "fetchSpec": "9.0.0-rc.3"
+   },
+   "_requiredBy": [
+-    "/"
++    "/@react-spring/animated",
++    "/@react-spring/core",
++    "/@react-spring/three"
+   ],
+   "_resolved": "https://registry.npmjs.org/@react-spring/shared/-/shared-9.0.0-rc.3.tgz",
+   "_shasum": "3f4c9d90accc20fef51a283a7806d78390b84161",
+-  "_spec": "@react-spring/shared@https://registry.npmjs.org/@react-spring/shared/-/shared-9.0.0-rc.3.tgz",
+-  "_where": "/tmp/tmp-58859EilwruK1JkJY",
++  "_spec": "@react-spring/shared@9.0.0-rc.3",
++  "_where": "/home/casper/cxspxr/twoeyes/node_modules/@react-spring/three",
+   "author": {
+     "name": "Paul Henschel"
+   },
+@@ -51,6 +54,6 @@
+   "publishConfig": {
+     "access": "public"
+   },
+-  "sideEffects": false,
++  "sideEffects": true,
+   "version": "9.0.0-rc.3"
+ }

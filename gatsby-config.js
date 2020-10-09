@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: "twoeyes",
-    description: "Binocular trainer",
+    description: "Binocular trainer. Restoring binocular vision by exercising",
     author: "Yaroslav Kasperovych",
   },
   plugins: [
