@@ -83,7 +83,7 @@ I am open to contributions mainly as exercises as for example:
   <em>
     jest
     · testing-library
-    · Storybook
+    · enzyme
   </em>
   <br />
   <em>
