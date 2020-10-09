@@ -78,10 +78,14 @@ describe("list of intro levels", () => {
       {
         hint: (
           <span>
-            the thing is for you to see both colors in bright variant or both in dark{" "}
+            the <b>main thing</b> is for you to see both colors in bright variant or both in dark{" "}
             <Typist.Delay ms={700} /> you may close one of your eye to understand that
           </span>
         ),
+      },
+      {
+        hint:
+          "you need to try to make a bigger distance between the eyes and the screen every time you exercise",
       },
       {
         hint: "now, wear your glasses and make sure there is no light beside the screen one",
