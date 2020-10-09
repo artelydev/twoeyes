@@ -1,8 +1,6 @@
 import React from "react";
 import Typist from "react-typist";
 import { Box } from "@material-ui/core";
-// eslint-disable-next-line import/no-cycle
-import WithKeyboardNavigation from "../../hocs/WithKeyboardNavigation/WithKeyboardNavigation";
 import styles from "../Levels.module.scss";
 import { RGBColor } from "../../contexts/SettingsContext";
 import "../TypistCursor.scss";
@@ -21,7 +19,7 @@ export type IntroLevelProps = {
  * Navigation intro level component
  * @param hint - intro hint to be shown to a user
  */
-export const IntroLevel: React.FC<IntroLevelProps> = ({ hint }) => {
+const IntroLevel: React.FC<IntroLevelProps> = ({ hint }) => {
   const [, , , , , currentLevelCounter] = useNavigation();
 
   const { color, bgColor } = usePalette();
@@ -66,4 +64,4 @@ export const IntroLevel: React.FC<IntroLevelProps> = ({ hint }) => {
   );
 };
 
-export default WithKeyboardNavigation(IntroLevel);
+export default IntroLevel;

@@ -6,7 +6,7 @@ import styles from "./Layout.module.scss";
 import Seo from "../Seo/Seo";
 import Navigation from "../Navigation";
 import FullscreenContainer from "../FullscreenContainer/FullscreenContainer";
-import useGlobalBackground from "../../hooks/useGlobalColors";
+import useGlobalBackground from "../../hooks/useGlobalColors/useGlobalColors";
 
 /**
  * Layout component props type

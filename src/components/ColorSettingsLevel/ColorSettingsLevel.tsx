@@ -4,10 +4,8 @@ import { Box } from "@material-ui/core";
 import { VisibilityOff } from "@material-ui/icons";
 import Typist from "react-typist";
 import styles from "../Levels.module.scss";
-import { RGBColor } from "../../contexts/SettingsContext";
+import { RGBColor } from "../../contexts/SettingsContext/SettingsContext";
 import "../TypistCursor.scss";
-// eslint-disable-next-line import/no-cycle
-import WithKeyboardNavigation from "../../hocs/WithKeyboardNavigation/WithKeyboardNavigation";
 import useGlobalColors from "../../hooks/useGlobalColors/useGlobalColors";
 // eslint-disable-next-line import/no-cycle
 import useNavigation from "../../hooks/useNavigation/useNavigation";
@@ -28,11 +26,7 @@ export type ColorSettingsLevelProps = {
  * @param changeColor - function to change a lense color
  * @param hint - to be provided for a user
  */
-export const ColorSettingsLevel: React.FC<ColorSettingsLevelProps> = ({
-  color,
-  changeColor,
-  hint,
-}) => {
+const ColorSettingsLevel: React.FC<ColorSettingsLevelProps> = ({ color, changeColor, hint }) => {
   const [, , , , , currentLevelCounter] = useNavigation();
   const [
     [, setGlobalBackground, resetGlobalBackground],
@@ -75,4 +69,4 @@ export const ColorSettingsLevel: React.FC<ColorSettingsLevelProps> = ({
   );
 };
 
-export default WithKeyboardNavigation(ColorSettingsLevel);
+export default ColorSettingsLevel;

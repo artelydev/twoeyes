@@ -4,6 +4,7 @@ import useSettings from "../useSettings/useSettings";
 import introLevels from "../../components/IntroLevel/introLevels";
 // eslint-disable-next-line import/no-cycle
 import ColorSettingsLevel from "../../components/ColorSettingsLevel/ColorSettingsLevel";
+// eslint-disable-next-line import/no-cycle
 import Exercise from "../../components/Exercise/Exercise";
 // eslint-disable-next-line import/no-cycle
 import IntroLevel from "../../components/IntroLevel/IntroLevel";
@@ -92,7 +93,7 @@ const useNavigation = (): UseNavigationReturn => {
     },
     {
       type: "ExerciseLevel",
-      component: <Exercise />,
+      component: <Exercise colors={[leftLense, rightLense]} />,
     },
   ];
 

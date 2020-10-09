@@ -1,0 +1,13 @@
+diff --git a/node_modules/@react-spring/three/package.json b/node_modules/@react-spring/three/package.json
+index 1072656..8284eeb 100644
+--- a/node_modules/@react-spring/three/package.json
++++ b/node_modules/@react-spring/three/package.json
+@@ -70,7 +72,7 @@
+   "publishConfig": {
+     "access": "public"
+   },
+-  "sideEffects": false,
++  "sideEffects": true,
+   "types": "index.d.ts",
+   "version": "9.0.0-rc.3"
+ }

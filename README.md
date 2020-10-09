@@ -1,11 +1,76 @@
-<h2 align="center">Opinionated Gatsby Starter</h2>
+<h2 align="center">twoeyes</h2>
+
+<p align="center">
+  <a href="https://app.netlify.com/sites/twoeyes/deploys">
+    <img src="https://api.netlify.com/api/v1/badges/8994a6ec-7f8e-44c3-96ee-8a245381feba/deploy-status" alt="Netlify Status"></a>
+  <a href="https://github.com/cxspxr/twoeyes/actions?query=workflow%3AMain+branch%3Amaster">
+    <img alt="Github Actions Build Status" src="https://img.shields.io/github/workflow/status/cxspxr/twoeyes/Main?label=Build&style=flat-square"></a>    
+  <a href="https://github.com/prettier/prettier">
+    <img alt="code style: prettier" src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square"></a>
+</p>
+
+### 👁 Binocular trainer
+
+This piece of software serves as a helpful tool to restore
+a binocular vision.
+
+#### ⚠ Caution
+It is not in any way official treatment and nobody doesn't pretend it is.
+It just what helps me (along with exercises) to deal with my problem,
+thus I wanted to share it.
+
+If you have strabismus or amblyopia you need to deal with them first.
+Consult your doctor for that matter or at least do as many eye exercises
+as you could, because it would be really hard to make use of these exercises
+otherwise.
+
+#### ↗ Motivation
+
+There is ***really*** not so many applications that helps with that exact problem.
+
+#### ？ Instructions
+
+The main thing about exercises is that you need to try to either
+see the both colors darkly or both colors brightly, that would be
+the indicator that both eyes work.
+
+Try to close your eyes one by one for better understanding.
+
+#### ⤓ Installation
+
+It is possible to install the application on desktop and
+mobile. For that matter one would need a modern [Chrome browser](https://www.google.com/chrome/).
+Then when you open the website, there should be either **⊕** sign next
+to the address line or the popup that suggest you to add an app to either desktop
+or to the home screen of your mobile device.
+
+In any case it is possible to install the app by clicking on
+[***Customize and control Google Chrome***](https://www.live2tech.com/wp-content/uploads/2018/02/how-to-home-button-google-chrome-1.jpg)
+context menu toggle and then clicking something like "Add to home screen".
+
+#### ⛒ Offline mode
+
+The application works fully offline once you are visited
+the website, and you will receive updates once something
+is updated, in case you use the officially deployed application.
+
+### ⥅ Contributions
+
+I am open to contributions mainly as exercises as for example:
+
+* 2D (mini-) games written in React
+* Physics simulations in React / react-three-fiber
+* Interactive graphics in react-three-fiber
+
+### ⚙ Technologies used
 
 <p align="center">
   <em>
-    TypeScript
-    · jest
-    · testing-library
-    · Storybook
+    React
+    · GatsbyJS
+    · three.js
+    · react-three-fiber
+    · TypeScript
   </em>
   <br />
   <em>
@@ -16,87 +81,21 @@
   </em>
   <br />
   <em>
-    Netlify-ready
-    · GitHub Actions
+    jest
+    · testing-library
+    · enzyme
+  </em>
+  <br />
+  <em>
+    GitHub Actions
     · Renovate
     · TypoCI
-    · PWA-enabled
-    · Typography.js
+    · PWA
   </em>
 </p>
 
-<p align="center">
-  <a href="https://github.com/datacrafts-io/gatsby-opinionated-starter/actions?query=workflow%3AMain+branch%3Amaster">
-    <img alt="Github Actions Build Status" src="https://img.shields.io/github/workflow/status/datacrafts-io/gatsby-opinionated-starter/Main?label=Build&style=flat-square"></a>    
-  <a href="https://www.npmjs.com/package/gatsby-opinionated-starter">
-    <img alt="npm version" src="https://img.shields.io/npm/v/gatsby-opinionated-starter.svg?style=flat-square"></a>
-  <a href="https://github.com/prettier/prettier">
-    <img alt="code style: prettier" src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square"></a>
-</p>
+### 💫 Deploy your own
 
-### _Very_ opinionated starter for Gatsby
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/cxspxr/twoeyes)
 
-This is a complex boilerplate for [Gatsby](https://www.gatsbyjs.org/).
-
-Supports:
-
-- [TypeScript](https://www.typescriptlang.org/)
-- [Renovate](https://renovate.whitesourcesoftware.com/)
-- [PWA](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps)
-- [PropTypes](https://github.com/facebook/prop-types)
-- [Storybook](https://storybook.js.org/)
-- [Typography.js](https://kyleamathews.github.io/typography.js/)
-- [Jest](https://jestjs.io/)
-- [testing-library](https://testing-library.com/)
-- [stylelint](https://stylelint.io/)
-- [ESLint](https://eslint.org/)
-- [Airbnb ESLint config](https://github.com/airbnb/javascript)
-- [Prettier support for ESLint](https://github.com/prettier/eslint-plugin-prettier)
-- [remark-lint](https://remark.js.org/)
-- [Husky](https://github.com/typicode/husky)
-- [TypoCI](https://typoci.com/)
-- [SCSS](https://sass-lang.com/)
-- [(S)CSS Modules](https://github.com/css-modules/css-modules)
-- [Netlify](https://www.netlify.com/)
-- [GitHub Actions CI](https://github.com/features/actions)
-
-## 🚀 Quick start
-
-1.  **Create a Gatsby site.**
-
-    Firstly, you need to install Gatsby CLI on your machine:
-
-    ```shell
-    $ npm i -g gatsby-cli
-    ```
-
-    Use the Gatsby CLI to create a new site, specifying a starter.
-
-    ```shell
-    # create a new Gatsby site using this starter
-    $ gatsby new opinionated-project https://github.com/datacrafts-io/gatsby-opinionated-starter
-    ```
-
-1.  **Start developing.**
-
-    In order to run Storybook + Gatsby dev server, navigate into your new site’s directory and start it up.
-
-    ```shell
-    $ cd opinionated-project/
-    $ npm i -D husky
-    $ npm run start
-    ```
-
-## 🎓 Learning Gatsby
-
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.org/). Here are some places to start:
-
-- **For most developers, it is recommended starting with official [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.org/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
-
-- **To dive straight into code samples, head [to official documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
-
-### 💫 Deploy
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/datacrafts-io/gatsby-opinionated-starter)
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/datacrafts-io/gatsby-opinionated-starter)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/cxspxr/twoeyes)

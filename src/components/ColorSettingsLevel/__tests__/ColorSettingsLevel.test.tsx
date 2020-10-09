@@ -3,7 +3,7 @@ import { ReactWrapper, mount } from "enzyme";
 import { render, waitFor } from "@testing-library/react";
 import Typist from "react-typist";
 import { CirclePicker } from "react-color";
-import { ColorSettingsLevel, ColorSettingsLevelProps } from "../ColorSettingsLevel";
+import ColorSettingsLevel, { ColorSettingsLevelProps } from "../ColorSettingsLevel";
 import useNavigation from "../../../hooks/useNavigation/useNavigation";
 import useGlobalColors from "../../../hooks/useGlobalColors/useGlobalColors";
 
