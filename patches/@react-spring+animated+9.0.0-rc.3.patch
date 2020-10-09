@@ -2,45 +2,6 @@ diff --git a/node_modules/@react-spring/animated/package.json b/node_modules/@re
 index 49fb055..0b9df06 100644
 --- a/node_modules/@react-spring/animated/package.json
 +++ b/node_modules/@react-spring/animated/package.json
-@@ -1,27 +1,29 @@
- {
--  "_from": "https://registry.npmjs.org/@react-spring/animated/-/animated-9.0.0-rc.3.tgz",
-+  "_from": "@react-spring/animated@9.0.0-rc.3",
-   "_id": "@react-spring/animated@9.0.0-rc.3",
-   "_inBundle": false,
-   "_integrity": "sha512-dAvgtKhkYpzzr+EkmZ4ZuJ5CujxCW0LaT109DvO/2MQNk3EWIxcgl+ik4tSulSbgau1GN8RlkRKyDp0wISdQ3Q==",
-   "_location": "/@react-spring/animated",
-   "_phantomChildren": {},
-   "_requested": {
--    "type": "remote",
--    "raw": "@react-spring/animated@https://registry.npmjs.org/@react-spring/animated/-/animated-9.0.0-rc.3.tgz",
-+    "type": "version",
-+    "registry": true,
-+    "raw": "@react-spring/animated@9.0.0-rc.3",
-     "name": "@react-spring/animated",
-     "escapedName": "@react-spring%2fanimated",
-     "scope": "@react-spring",
--    "rawSpec": "https://registry.npmjs.org/@react-spring/animated/-/animated-9.0.0-rc.3.tgz",
--    "saveSpec": "https://registry.npmjs.org/@react-spring/animated/-/animated-9.0.0-rc.3.tgz",
--    "fetchSpec": "https://registry.npmjs.org/@react-spring/animated/-/animated-9.0.0-rc.3.tgz"
-+    "rawSpec": "9.0.0-rc.3",
-+    "saveSpec": null,
-+    "fetchSpec": "9.0.0-rc.3"
-   },
-   "_requiredBy": [
--    "/"
-+    "/@react-spring/core",
-+    "/@react-spring/three"
-   ],
-   "_resolved": "https://registry.npmjs.org/@react-spring/animated/-/animated-9.0.0-rc.3.tgz",
-   "_shasum": "e792cb76aacecfc78db2be6020ac11ce96503eb5",
--  "_spec": "@react-spring/animated@https://registry.npmjs.org/@react-spring/animated/-/animated-9.0.0-rc.3.tgz",
--  "_where": "/tmp/tmp-58942J1DT2oPWKsnU",
-+  "_spec": "@react-spring/animated@9.0.0-rc.3",
-+  "_where": "/home/casper/cxspxr/twoeyes/node_modules/@react-spring/three",
-   "author": {
-     "name": "Paul Henschel"
-   },
 @@ -65,7 +67,7 @@
      "access": "public"
    },
