@@ -23,9 +23,9 @@ export const COLOR: RGBColor = {
  * Default palette background color RGB object
  */
 export const BG_COLOR: RGBColor = {
-  r: 254,
-  g: 255,
-  b: 234,
+  r: 250,
+  g: 250,
+  b: 250,
 };
 
 /**

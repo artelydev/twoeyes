@@ -28,8 +28,8 @@ module.exports = {
         name: "twoeyes",
         short_name: "twoeyes",
         start_url: "/",
-        background_color: "#663399",
-        theme_color: "#663399",
+        background_color: "#fafafa",
+        theme_color: "#fafafa",
         display: "fullscreen",
         icon: "src/images/eye.png", // This path is relative to the root of the site.
       },
