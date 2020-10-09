@@ -1,6 +1,36 @@
 <h2 align="center">twoeyes</h2>
 
 <p align="center">
+  <em>
+    React
+    · GatsbyJS
+    · three.js
+    · react-three-fiber
+    · TypeScript
+  </em>
+  <br />
+  <em>
+    ESLint + airbnb
+    · stylelint
+    · remark-lint
+    · Prettier
+  </em>
+  <br />
+  <em>
+    jest
+    · testing-library
+    · enzyme
+  </em>
+  <br />
+  <em>
+    GitHub Actions
+    · Renovate
+    · TypoCI
+    · PWA
+  </em>
+</p>
+
+<p align="center">
   <a href="https://app.netlify.com/sites/twoeyes/deploys">
     <img src="https://api.netlify.com/api/v1/badges/8994a6ec-7f8e-44c3-96ee-8a245381feba/deploy-status" alt="Netlify Status"></a>
   <a href="https://github.com/cxspxr/twoeyes/actions?query=workflow%3AMain+branch%3Amaster">
@@ -29,6 +59,9 @@ otherwise.
 There is ***really*** not so many applications that helps with that exact problem.
 
 #### ？ Instructions
+
+First of all, for these exercise you need to have and wear
+anaglyph red-cyan (could be another, but still anaglyph) 3D glasses.
 
 The main thing about exercises is that you need to try to either
 see the both colors darkly or both colors brightly, that would be
@@ -61,38 +94,6 @@ I am open to contributions mainly as exercises as for example:
 * 2D (mini-) games written in React
 * Physics simulations in React / react-three-fiber
 * Interactive graphics in react-three-fiber
-
-### ⚙ Technologies used
-
-<p align="center">
-  <em>
-    React
-    · GatsbyJS
-    · three.js
-    · react-three-fiber
-    · TypeScript
-  </em>
-  <br />
-  <em>
-    ESLint + airbnb
-    · stylelint
-    · remark-lint
-    · Prettier
-  </em>
-  <br />
-  <em>
-    jest
-    · testing-library
-    · enzyme
-  </em>
-  <br />
-  <em>
-    GitHub Actions
-    · Renovate
-    · TypoCI
-    · PWA
-  </em>
-</p>
 
 ### 💫 Deploy your own
 
