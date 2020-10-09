@@ -33,8 +33,8 @@
 <p align="center">
   <a href="https://app.netlify.com/sites/twoeyes/deploys">
     <img src="https://api.netlify.com/api/v1/badges/8994a6ec-7f8e-44c3-96ee-8a245381feba/deploy-status" alt="Netlify Status"></a>
-  <a href="https://github.com/cxspxr/twoeyes/actions?query=workflow%3AMain+branch%3Amaster">
-    <img alt="Github Actions Build Status" src="https://img.shields.io/github/workflow/status/cxspxr/twoeyes/Main?label=Build&style=flat-square"></a>    
+  <a href="https://github.com/artelydev/twoeyes/actions?query=workflow%3AMain+branch%3Amaster">
+    <img alt="Github Actions Build Status" src="https://img.shields.io/github/workflow/status/artelydev/twoeyes/Main?label=Build&style=flat-square"></a>    
   <a href="https://github.com/prettier/prettier">
     <img alt="code style: prettier" src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square"></a>
 </p>
@@ -97,6 +97,6 @@ I am open to contributions mainly as exercises as for example:
 
 ### 💫 Deploy your own
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/cxspxr/twoeyes)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/artelydev/twoeyes)
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/cxspxr/twoeyes)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/artelydev/twoeyes)

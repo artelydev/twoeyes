@@ -55,7 +55,7 @@
     "babel-loader": "8.1.0",
     "babel-preset-gatsby": "0.5.4",
     "babel-preset-react-app": "9.1.2",
-    "concurrently": "5.2.0",
+    "concurrently": "5.3.0",
     "enzyme": "3.11.0",
     "enzyme-adapter-react-16": "1.15.3",
     "eslint": "7.10.0",
@@ -119,10 +119,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/cxspxr/twoeyes"
+    "url": "https://github.com/artelydev/twoeyes"
   },
   "bugs": {
-    "url": "https://github.com/cxspxr/twoeyes/issues"
+    "url": "https://github.com/artelydev/twoeyes/issues"
   },
   "remarkConfig": {
     "plugins": [
