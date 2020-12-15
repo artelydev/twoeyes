@@ -2,13 +2,13 @@ import React from "react";
 import { mount, ReactWrapper } from "enzyme";
 import { Box } from "@material-ui/core";
 import { Canvas } from "react-three-fiber";
-import Exercise, { ExerciseProps } from "../Exercise";
+import ShuffleExercise, { ShuffleExerciseProps } from "../ShuffleExercise";
 import useGlobalColors from "../../../hooks/useGlobalColors/useGlobalColors";
 
 jest.mock("../../../hooks/useGlobalColors/useGlobalColors");
 
-describe("Exercise component", () => {
-  const defaultProps: ExerciseProps = {
+describe("ShuffleExercise component", () => {
+  const defaultProps: ShuffleExerciseProps = {
     colors: [
       { r: 255, g: 0, b: 0 },
       { r: 0, g: 255, b: 255 },
@@ -21,7 +21,7 @@ describe("Exercise component", () => {
     beforeEach(() => {
       jest.spyOn(React, "useEffect");
       // eslint-disable-next-line react/jsx-props-no-spreading
-      wrapper = mount(<Exercise {...defaultProps} />);
+      wrapper = mount(<ShuffleExercise {...defaultProps} />);
     });
 
     afterEach(() => {

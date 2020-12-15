@@ -8,7 +8,7 @@ import { Box } from "@material-ui/core";
 import * as THREE from "three";
 import { useSprings, a } from "@react-spring/three";
 import { Canvas } from "react-three-fiber";
-import exerciseStyles from "./Exercise.module.scss";
+import exerciseStyles from "./ShuffleExercise.module.scss";
 import useGlobalColors from "../../hooks/useGlobalColors/useGlobalColors";
 import { RGBColor } from "../../contexts/SettingsContext/SettingsContext";
 
@@ -41,14 +41,14 @@ export const getRandomColor = (colors: string[]) => ({
 });
 
 /**
- * Exercise content component props type
+ * ShuffleExercise content component props type
  */
 type ContentProps = {
   colors: [string, string];
 };
 
 /**
- * Exercise content component
+ * ShuffleExercise content component
  * @param colors - a set of 2 rgb strings to be used as colors for threejs shapes
  */
 export const Content: React.FC<ContentProps> = ({ colors }) => {
@@ -104,7 +104,7 @@ export const Content: React.FC<ContentProps> = ({ colors }) => {
 };
 
 /**
- * Exercise threejs lights component
+ * ShuffleExercise threejs lights component
  */
 export const Lights: React.FC = () => {
   return (
@@ -125,18 +125,18 @@ export const Lights: React.FC = () => {
 };
 
 /**
- * Exercise component props type
+ * ShuffleExercise component props type
  */
-export type ExerciseProps = {
+export type ShuffleExerciseProps = {
   colors: [RGBColor, RGBColor];
 };
 
 /**
- * Exercise component
+ * ShuffleExercise component
  * @param leftLense - RGBColor object of left lense color
  * @param rightLense - RGBColor object of right lense color
  */
-const Exercise: React.FC<ExerciseProps> = ({ colors: [leftLense, rightLense] }) => {
+const ShuffleExercise: React.FC<ShuffleExerciseProps> = ({ colors: [leftLense, rightLense] }) => {
   const [
     [, setGlobalBackground, resetGlobalBackground],
     [, setGlobalColor, resetGlobalColor],
@@ -157,7 +157,7 @@ const Exercise: React.FC<ExerciseProps> = ({ colors: [leftLense, rightLense] }) 
   }, []);
 
   return (
-    <Box className={exerciseStyles.exercise__container}>
+    <Box className={exerciseStyles.shuffle_exercise__container}>
       <Canvas shadowMap camera={{ position: [0, 0, 100], fov: 100 }}>
         <Lights />
         <Content colors={[leftLenseRGBString, rightLenseRGBString]} />
@@ -166,4 +166,4 @@ const Exercise: React.FC<ExerciseProps> = ({ colors: [leftLense, rightLense] }) 
   );
 };
 
-export default Exercise;
+export default ShuffleExercise;

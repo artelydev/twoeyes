@@ -5,7 +5,9 @@ import introLevels from "../../components/IntroLevel/introLevels";
 // eslint-disable-next-line import/no-cycle
 import ColorSettingsLevel from "../../components/ColorSettingsLevel/ColorSettingsLevel";
 // eslint-disable-next-line import/no-cycle
-import Exercise from "../../components/Exercise/Exercise";
+import ShuffleExercise from "../../components/ShuffleExercise/ShuffleExercise";
+// eslint-disable-next-line import/no-cycle
+import BoxesExercise from "../../components/BoxesExercise/BoxesExercise";
 // eslint-disable-next-line import/no-cycle
 import IntroLevel from "../../components/IntroLevel/IntroLevel";
 
@@ -93,7 +95,11 @@ const useNavigation = (): UseNavigationReturn => {
     },
     {
       type: "ExerciseLevel",
-      component: <Exercise colors={[leftLense, rightLense]} />,
+      component: <ShuffleExercise colors={[leftLense, rightLense]} />,
+    },
+    {
+      type: "ExerciseLevel",
+      component: <BoxesExercise colors={[leftLense, rightLense]} />,
     },
   ];
 
