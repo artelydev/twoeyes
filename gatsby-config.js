@@ -32,6 +32,11 @@ module.exports = {
         theme_color: "#fafafa",
         display: "fullscreen",
         icon: "src/images/eye.png", // This path is relative to the root of the site.
+        icon_options: {
+          // For all the options available,
+          // please see the section "Additional Resources" below.
+          purpose: `any maskable`,
+        },
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

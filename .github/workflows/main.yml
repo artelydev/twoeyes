@@ -25,6 +25,5 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: npm install
       - run: npm run build --if-present
-      - run: cp -r .well-known public/.well-known
       - run: npm run lint
       - run: npm run test
