@@ -34,7 +34,7 @@
     "react-typography": "0.16.19",
     "react-use": "15.3.3",
     "react-use-gesture": "7.0.15",
-    "three": "0.121.1",
+    "three": "0.125.0",
     "typography": "0.16.19",
     "typography-theme-moraga": "0.16.19"
   },
