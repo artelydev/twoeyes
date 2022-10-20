@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "author": "Yaroslav Kasperovych <ilovewindows96@gmail.com>",
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "1.2.30",
+    "@fortawesome/fontawesome-svg-core": "1.2.36",
     "@material-ui/core": "4.11.0",
     "@material-ui/icons": "4.9.1",
     "@react-spring/three": "9.0.0-rc.3",
