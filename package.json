@@ -9,7 +9,7 @@
     "@material-ui/icons": "4.9.1",
     "@react-spring/three": "9.0.0-rc.3",
     "@types/react-color": "3.0.4",
-    "@types/react-helmet": "6.1.5",
+    "@types/react-helmet": "6.1.11",
     "@types/react-typist": "2.0.1",
     "@types/typography": "0.16.3",
     "gatsby": "2.24.80",
